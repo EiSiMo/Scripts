@@ -4,6 +4,7 @@ Simple programs which are not worth a own repository
 ## Index
 |filename|description|
 |---|---|
+|`concat_lists.py`|make one sorted list out of two unsorted|
 |`cool_cat.py`|print a textfile to the commandline with a writing animation|
 |`img_meta_cleaner.py`|remove all metadata from any image|
 |`markov_chain.py`|generate similar data based on a file|
