@@ -30,8 +30,11 @@ class MarkovChain:
         print("[*] printing table")
         for key_char in self.table.keys():
             print(f"{repr(key_char)}:")
-            for key_next_char in self.table[key_char].keys():
-                print(f"\t{repr(key_next_char)}: {self.table[key_char][key_next_char]}")
+            zipped = list(zip(self.table[key_char].keys(), self.table[key_char].values()))
+            zipped.sort(key=lambda x: -x[1])
+            for key_next_char, probability in zipped:
+                print(f"\t{repr(key_next_char)}:\t{str(probability).zfill(len(str(self.ACCURACY)))}/{self.ACCURACY}")
+            print()
 
     def get(self, length):
         print(f"[*] getting {length} chars from table")
